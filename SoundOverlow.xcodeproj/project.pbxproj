@@ -12,6 +12,7 @@
 		CB455F201FFC60B500B9D326 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB455F1E1FFC60B500B9D326 /* Main.storyboard */; };
 		CB455F221FFC60B500B9D326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB455F211FFC60B500B9D326 /* Assets.xcassets */; };
 		CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB455F231FFC60B500B9D326 /* LaunchScreen.storyboard */; };
+		CB455F2E1FFC66D900B9D326 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB455F2D1FFC66D900B9D326 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,8 @@
 		CB455F211FFC60B500B9D326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB455F241FFC60B500B9D326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB455F261FFC60B500B9D326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB455F2D1FFC66D900B9D326 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		CB455F2F1FFC66E400B9D326 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB455F2E1FFC66D900B9D326 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +44,7 @@
 			children = (
 				CB455F191FFC60B500B9D326 /* SoundOverlow */,
 				CB455F181FFC60B500B9D326 /* Products */,
+				CB455F2C1FFC66D900B9D326 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,6 +67,15 @@
 				CB455F261FFC60B500B9D326 /* Info.plist */,
 			);
 			path = SoundOverlow;
+			sourceTree = "<group>";
+		};
+		CB455F2C1FFC66D900B9D326 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB455F2F1FFC66E400B9D326 /* MapKit.framework */,
+				CB455F2D1FFC66D900B9D326 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
