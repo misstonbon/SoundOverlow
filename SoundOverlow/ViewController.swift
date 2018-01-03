@@ -16,7 +16,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     //MAP
     
 
-    @IBOutlet weak var map: MKMapView!
+    @IBOutlet weak var map: MKMapView! // imports map view
     
     let manager = CLLocationManager()  // setting up manager
     
@@ -24,28 +24,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        let location = locations[0]
+        let location = locations[0]  // most recent location
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.04, 0.04)
         
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)  //sets region based on location and span
         
-        map.setRegion(region, animated: true)
+        map.setRegion(region, animated: true)  // shows blue dot blinking
         
-        self.map.showsUserLocation = true
+        self.map.showsUserLocation = true // shows blue dot
         
     }
+    
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-        
+        super.viewDidLoad()   // xcode version of document ready 
         
         manager.delegate = self
-        manager.desiredAccuracy = kCLLocationAccuracyBest
-        manager.requestWhenInUseAuthorization()
-        manager.startUpdatingLocation()
+        manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
+        manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
+        manager.startUpdatingLocation()  // updates location constantly
     }
 
 
