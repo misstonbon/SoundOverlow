@@ -26,7 +26,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         let location = locations[0]  // most recent location
         
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.04, 0.04)
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
         
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
         
