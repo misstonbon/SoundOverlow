@@ -25,6 +25,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
         let location = locations[0]  // most recent location
+        print(location)
+        print("Location above!")
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
         
@@ -36,7 +38,28 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         self.map.showsUserLocation = true // shows blue dot
         
+        
+        
+        ////// GEOCODER - REVERSE LOOKUP TO GET ZIPCODE /////
+        
+        CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in //placemark keeps track of all addresses in location and extracts
+            if error != nil {
+                print("There was an Error!")
+            }
+            else {
+                if let place = placemark?[0] { // most recent placemark
+                    print(place)
+                    let currentZip = place.postalCode
+                    print(currentZip!)   // force unwrap to avoid warning
+                }
+            }
+        }
+        
     }
+    
+    //////////// VIEW DID LOAD ////////////
+    
+    
     
     override func viewDidLoad()
     {
@@ -48,12 +71,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.startUpdatingLocation()  // updates location constantly
     }
 
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+/////////// DO NOT DELETE ANYTHING ABOVE THIS //////////////////
+    
 
 }
 
