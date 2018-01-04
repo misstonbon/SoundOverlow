@@ -20,6 +20,43 @@ let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
 // Load the dictionary of secret keys from secrets.plist
 
 
+///// PARSING JSON  //////
+
+struct Info: Decodable {
+   let TotalResults: Int?
+   let PageNumber: Int?
+   let Message: String?
+   let Events: [Event]
+}
+
+struct Event: Decodable {
+    let Id: Int?
+    let Date: String?
+    let Artists: [Artist]
+    let TicketUrl: String?
+//    let Venue: Venue
+}
+
+//struct Venue: Decodable {
+//    let Id: Int?
+//    let Name: String?
+//    let Address: String?
+//    let City: String?
+//    let State: String?
+//    let StateCode: String?
+//    let Country: String?
+//    let CountryCode: String?
+//    let Zipcode: String?
+//    let Eventurl: String?
+//    let Latitude: Double?
+//    let Longitude: Double?
+//}
+
+struct Artist: Decodable {
+    let Id: Int?
+    let Name: String?
+}
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
@@ -38,8 +75,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         //////   CURRENT LOCATION /////
         
         let location = locations[0]  // most recent location
-        print(location)
-        print("Location above!")
+//        print(location)
+//        print("Location above!")
         
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
         
@@ -64,23 +101,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     let currentZip = place.postalCode!
                     print(currentZip)   // force unwrap to avoid warning
                 }
-                
-                
-                //////////     URL SETUP FOR THE API CALL ////////
-                
-                let currentZip:String = "98104"
-                
-                let now = Date()
-                let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "YYYY-MM-DD"
-                let today = dateFormatter.string(from: now)
-                print(today)
-                
-                print("Today's date above")
-                
-                let url = "http://api.jambase.com/events?zipCode=\(currentZip)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
-                print(url)
-                print("URL above")
             }
             
         }
@@ -93,12 +113,45 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()   // xcode version of document ready
         
-
+        //////////     URL SETUP FOR THE API CALL ////////
+        
+        let currentZip:String = "98104"
+        
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        let today = dateFormatter.string(from: now)
+        print(today)
+        
+        print("Today's date above")
+        
+        
+        let jsonurlString = "http://api.jambase.com/events?zipCode=\(currentZip)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
+        print(jsonurlString)
+        print("JSON URL STRING YO")
+        
+        guard let url = URL(string: jsonurlString) else {return}
+        
+        URLSession.shared.dataTask(with: url) {(data, response, err) in
+        
+            guard let data = data else {return}
+            print("Printing data:")
+            print(String(data: data, encoding: .utf8)!)
+            
+            do {
+                let test = try JSONDecoder().decode([Event].self, from: data)
+                print(test)
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+        }.resume()
+    
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
         manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
         manager.startUpdatingLocation()  // updates location constantly
     }
+    
     
 }
 
