@@ -19,6 +19,8 @@ xcuserdata/
 .DS_Store
 .plist
 Keys.swift
+secrets.plist
+events.json
 
 
 ## Other
