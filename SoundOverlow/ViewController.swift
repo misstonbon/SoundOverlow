@@ -44,14 +44,14 @@ struct Event: Decodable {
 struct Venue: Decodable {
     let Id: Int
     let Name: String
-    let Address: String
-    let City: String
-    let State: String
-    let StateCode: String
-    let Country: String
-    let CountryCode: String
-    let ZipCode: String
-    let Eventurl: String
+    let Address: String?
+    let City: String?
+    let State: String?
+    let StateCode: String?
+    let Country: String?
+    let CountryCode: String?
+    let ZipCode: String?
+    let Eventurl: String?
     let Latitude: Double
     let Longitude: Double
 }
@@ -147,7 +147,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
            // print(data)  /// prints bytes again :(
             
             do {
-                let test = try JSONDecoder().decode(Info.self, from: data)
+                let test = try JSONDecoder().decode(ResponseFromJson.self, from: data)
                 print("Printing Info:")
                 print(test)
                 
