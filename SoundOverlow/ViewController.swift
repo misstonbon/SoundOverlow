@@ -11,17 +11,19 @@ import MapKit
 import Foundation
 import CoreLocation
 
+//////////////////////////////  IMPORTS SECRETS ////////////////////////////////////////////////////////////
+
 let path = Bundle.main.path(forResource: "secrets", ofType: "plist")
 let dict = NSDictionary(contentsOfFile: path!)
 
-// Load secrets
+//////////////////////////////// LOADS SECRETS ////////////////////////////////////////////////////////////
 
 // Load the dictionary of secret keys from secrets.plist
 let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
 let songKickKey = dict!.object(forKey: "SONGKICK_KEY") as! String
 
 
-///// PARSING JAMBASE JSON  //////
+/////////////////////////////////// PARSES JAMBASE JSON  ////////////////////////////////////
 
 struct ResponseFromJambase: Decodable {
     let Info: Info
@@ -62,7 +64,7 @@ struct Artist: Decodable {
     let Name: String
 }
 
-//// PARSING SONGKICK JSON ///
+////////////////////////////////// PARSES SONGKICK JSON ///////////////////////////////////////////////////////////////
 
 struct ResponseFromSongkick: Decodable {
    let resultsPage: Results
@@ -158,11 +160,12 @@ struct State: Decodable {
     let displayName: String?
 }
 
+/////////////  VIEW CONTROLLER  /////////////////////////////////////////
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     //MAP
     
-
     @IBOutlet weak var map: MKMapView! // imports map view
     
     let manager = CLLocationManager()  // setting up manager
@@ -172,12 +175,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let currentLat = "47.6062"
     let currentLong = "-122.3321"
     
-    
-    //this functions is called every time user moves
-    
-    
-    
-    ////// PARSING JSON FUNC ///////
+////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
     func processSongkickData(currentLat: String, currentLong: String ) {
         
@@ -215,6 +213,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
+//////////////////////////////  JAMBASE JSON PARSING FUNCTION ////////////////////////////////////////////////////////////
+    
     func processJambaseData (zipCode: String) {
         let now = Date()
         let dateFormatter = DateFormatter()
@@ -249,7 +249,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
-        //////   CURRENT LOCATION /////
+////////////////////////////////////   CURRENT LOCATION ///////////////////////////////////
         
         let location = locations[0]  // most recent location
 
@@ -264,7 +264,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         self.map.showsUserLocation = true // shows blue dot
         
 
-        ////// GEOCODER - REVERSE LOOKUP TO GET ZIPCODE /////
+//////////////////////////////////// GEOCODER - REVERSE ZIPCODE LOOKUP  ///////////////////////////////////
         
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in //placemark keeps track of all addresses in location and extracts
             if error != nil {
@@ -288,24 +288,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
             }
         }
-        
     }
     
-//////////// VIEW DID LOAD ////////////
+////////////////////////////////////////// VIEW DID LOAD //////////////////////////////////////////
     
     override func viewDidLoad()
     {
         super.viewDidLoad()   // xcode version of document ready
         
         self.processJambaseData(zipCode: self.currentZip)
-        self.processSongkickData(currentLat: self.currentLat, currentLong: currentLong)
+        self.processSongkickData(currentLat: self.currentLat, currentLong: self.currentLong)
         
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
         manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
         manager.startUpdatingLocation()  // updates location constantly
     }
-    
-    
 }
 
