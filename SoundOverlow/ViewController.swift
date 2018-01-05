@@ -64,11 +64,11 @@ struct Artist: Decodable {
 
 //// PARSING SONGKICK JSON ///
 
-struct ResponseFromSongkick {
+struct ResponseFromSongkick: Decodable {
    let resultsPage: Results
 }
 
-struct Results {
+struct Results: Decodable {
     let status: String
     let results: AllResults
     let perPage: Int
@@ -76,11 +76,11 @@ struct Results {
     let totalEntries: Int
     let clientLocation: ClientLocation
 }
-struct AllResults {
+struct AllResults: Decodable {
     let event: [Events]
 }
 
-struct Events  {
+struct Events: Decodable  {
     let type: String
     let popularity: Double
     let displayName: String
@@ -91,29 +91,29 @@ struct Events  {
     let location: Location
     let uri: String
     let id: Int
-    let venue: Venue
+    let venue: VenueInfo
 }
 
-struct ClientLocation {
+struct ClientLocation: Decodable {
     let ip: String?
     let lat: Double
     let lng: Double
     let metroAreaId: Int
 }
 
-struct Start {
+struct Start: Decodable {
     let datetime: String?
     let time: String?
     let date: String
 }
 
-struct Location {
+struct Location: Decodable {
     let city: String
     let lat: Double
-    let lng: Double 
+    let lng: Double
 }
 
-struct Performance {
+struct Performance: Decodable {
     let displayName: String
     let billingIndex: Int
     let billing: String
@@ -121,19 +121,42 @@ struct Performance {
     let id: Int
 }
 
-struct ArtistDescription {
+struct ArtistDescription: Decodable {
     let displayName: String
     let identifier: [Identifier]
     let uri: String
     let id: Int
 }
 
-struct Identifier {
+struct Identifier: Decodable {
     let href: String
     let mbid: String
 }
 
+struct VenueInfo: Decodable {
+    let displayName: String
+    let lat: Double
+    let lng: String
+    let metroArea: MetroArea
+    let uri: String
+    let id: Int
+}
 
+struct MetroArea: Decodable {
+    let displayName: String
+    let country: Country
+    let uri: String
+    let id: Int
+    let state: State
+}
+
+struct Country: Decodable {
+    let displayName: String
+}
+
+struct State: Decodable {
+    let displayName: String
+}
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
