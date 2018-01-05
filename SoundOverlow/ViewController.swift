@@ -16,13 +16,14 @@ let dict = NSDictionary(contentsOfFile: path!)
 
 // Load secrets
 
-let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
 // Load the dictionary of secret keys from secrets.plist
+let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
+let songKickKey = dict!.object(forKey: "SONGKICK_KEY") as! String
 
 
-///// PARSING JSON  //////
+///// PARSING JAMBASE JSON  //////
 
-struct ResponseFromJson: Decodable {
+struct ResponseFromJambase: Decodable {
     let Info: Info
     let Events: [Event]
 }
@@ -51,7 +52,7 @@ struct Venue: Decodable {
     let Country: String?
     let CountryCode: String?
     let ZipCode: String?
-    let Eventurl: String?
+    let Url: String?
     let Latitude: Double
     let Longitude: Double
 }
@@ -61,8 +62,80 @@ struct Artist: Decodable {
     let Name: String
 }
 
+//// PARSING SONGKICK JSON ///
+
+struct ResponseFromSongkick {
+   let resultsPage: Results
+}
+
+struct Results {
+    let status: String
+    let results: AllResults
+    let perPage: Int
+    let page: Int
+    let totalEntries: Int
+    let clientLocation: ClientLocation
+}
+struct AllResults {
+    let event: [Events]
+}
+
+struct Events  {
+    let type: String
+    let popularity: Double
+    let displayName: String
+    let status: String
+    let performance: [Performance]
+    let ageRestriction: String?
+    let start: Start
+    let location: Location
+    let uri: String
+    let id: Int
+    let venue: Venue
+}
+
+struct ClientLocation {
+    let ip: String?
+    let lat: Double
+    let lng: Double
+    let metroAreaId: Int
+}
+
+struct Start {
+    let datetime: String?
+    let time: String?
+    let date: String
+}
+
+struct Location {
+    let city: String
+    let lat: Double
+    let lng: Double 
+}
+
+struct Performance {
+    let displayName: String
+    let billingIndex: Int
+    let billing: String
+    let artist: ArtistDescription
+    let id: Int
+}
+
+struct ArtistDescription {
+    let displayName: String
+    let identifier: [Identifier]
+    let uri: String
+    let id: Int
+}
+
+struct Identifier {
+    let href: String
+    let mbid: String
+}
+
+
+
 class ViewController: UIViewController, CLLocationManagerDelegate {
-    
     
     //MAP
     
@@ -70,8 +143,44 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView! // imports map view
     
     let manager = CLLocationManager()  // setting up manager
+    var currentZip = "98104"
     
     //this functions is called every time user moves
+    
+    func processEventData (zipCode: String) {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        let today = dateFormatter.string(from: now)
+        print("Today's date:")
+        print(today)
+        
+        let jsonurlString = "http://api.jambase.com/events?zipCode=\(zipCode)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
+        
+        print("JSON URL STRING ---------------------------")
+        
+        print(jsonurlString)
+        
+        guard let url = URL(string: jsonurlString) else {return}
+        
+        URLSession.shared.dataTask(with: url) {(data, response, err) in
+            
+            guard let data = data else {return}
+            print("Printing data:")
+            print(String(data: data, encoding: .utf8)!)
+            // print(data)  /// prints bytes again :(
+            
+            do {
+                let test = try JSONDecoder().decode(ResponseFromJambase.self, from: data)
+                
+                print("Printing Info:")
+                print(test)
+                
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+            }.resume()
+    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
@@ -97,16 +206,19 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in //placemark keeps track of all addresses in location and extracts
             if error != nil {
-                print("There was an Error!")
+                print("There was an Geocoder Error!")
+                print(error!)
             }
             else {
                 if let place = placemark?[0] { // most recent placemark
-                    print(place)
-                    let currentZip = place.postalCode!
-                    print(currentZip)   // force unwrap to avoid warning
+                    if self.currentZip != place.postalCode! {
+                        self.currentZip = place.postalCode!
+                        
+                        print(self.currentZip)   // force unwrap to avoid warning
+                        self.processEventData(zipCode: self.currentZip)
+                    }
                 }
             }
-            
         }
         
     }
@@ -117,45 +229,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()   // xcode version of document ready
         
-        //////////     URL SETUP FOR THE API CALL ////////
+        self.processEventData(zipCode: self.currentZip)
         
-        let currentZip:String = "98104"
-        
-        let now = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD"
-        let today = dateFormatter.string(from: now)
-        print(today)
-        
-        print("Today's date above")
-        
-        
-        let jsonurlString = "http://api.jambase.com/events?zipCode=\(currentZip)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
-        
-            print("JSON URL STRING ---------------------------")
-        
-        print(jsonurlString)
-    
-        
-        guard let url = URL(string: jsonurlString) else {return}
-        
-        URLSession.shared.dataTask(with: url) {(data, response, err) in
-        
-            guard let data = data else {return}
-            print("Printing data:")
-            print(String(data: data, encoding: .utf8)!)
-           // print(data)  /// prints bytes again :(
-            
-            do {
-                let test = try JSONDecoder().decode(ResponseFromJson.self, from: data)
-                print("Printing Info:")
-                print(test)
-                
-            } catch let jsonErr {
-                print("Error serializing json:", jsonErr)
-            }
-        }.resume()
-    
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
         manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
