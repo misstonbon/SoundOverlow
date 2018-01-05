@@ -71,7 +71,7 @@ struct ResponseFromSongkick: Decodable {
 struct Results: Decodable {
     let status: String
     let results: AllResults
-    let perPage: Int
+    let perPage: Int?
     let page: Int
     let totalEntries: Int
     let clientLocation: ClientLocation
@@ -82,80 +82,80 @@ struct AllResults: Decodable {
 
 struct Events: Decodable  {
     let type: String
-    let popularity: Double
+    let popularity: Double?
     let displayName: String
-    let status: String
+    let status: String?
     let performance: [Performance]
     let ageRestriction: String?
     let start: Start
     let location: Location
     let uri: String
-    let id: Int
+    let id: Int?
     let venue: VenueInfo
 }
 
 struct ClientLocation: Decodable {
     let ip: String?
-    let lat: Double
-    let lng: Double
-    let metroAreaId: Int
+    let lat: Double?
+    let lng: Double?
+    let metroAreaId: Int?
 }
 
 struct Start: Decodable {
     let datetime: String?
     let time: String?
-    let date: String
+    let date: String?
 }
 
 struct Location: Decodable {
     let city: String
-    let lat: Double
-    let lng: Double
+    let lat: Double?
+    let lng: Double?
 }
 
 struct Performance: Decodable {
     let displayName: String
-    let billingIndex: Int
-    let billing: String
+    let billingIndex: Int?
+    let billing: String?
     let artist: ArtistDescription
-    let id: Int
+    let id: Int?
 }
 
 struct ArtistDescription: Decodable {
     let displayName: String
     let identifier: [Identifier]
-    let uri: String
-    let id: Int
+    let uri: String?
+    let id: Int?
 }
 
 struct Identifier: Decodable {
-    let href: String
-    let mbid: String
+    let href: String?
+    let mbid: String?
 }
 
 struct VenueInfo: Decodable {
     let displayName: String
-    let lat: Double
-    let lng: String
+    let lat: Double?
+    let lng: Double?
     let metroArea: MetroArea
-    let uri: String
-    let id: Int
+    let uri: String?
+    let id: Int?
 }
 
 struct MetroArea: Decodable {
     let displayName: String
     let country: Country
-    let uri: String
-    let id: Int
+    let uri: String?
+    let id: Int?
     let state: State
 }
 
 struct Country: Decodable {
-    let displayName: String
+    let displayName: String?
 }
 
 struct State: Decodable {
-    let displayName: String
+    let displayName: String?
 }
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
@@ -166,11 +166,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var map: MKMapView! // imports map view
     
     let manager = CLLocationManager()  // setting up manager
+    
     var currentZip = "98104"
+    
+    let currentLat = "47.6062"
+    let currentLong = "-122.3321"
+    
     
     //this functions is called every time user moves
     
-    func processEventData (zipCode: String) {
+    
+    
+    ////// PARSING JSON FUNC ///////
+    
+    func processSongkickData(currentLat: String, currentLong: String ) {
+        
         let now = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-DD"
@@ -178,25 +188,57 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         print("Today's date:")
         print(today)
         
-        let jsonurlString = "http://api.jambase.com/events?zipCode=\(zipCode)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
+        let songKickUrl = "http://api.songkick.com/api/3.0/events.json?apikey=\(String(describing: songKickKey))&min_date=\(today)&max_date=\(today)&location=geo:\(currentLat),\(currentLong)"
         
-        print("JSON URL STRING ---------------------------")
+        print("Songkick url: =====================")
+        print(songKickUrl)
         
-        print(jsonurlString)
         
-        guard let url = URL(string: jsonurlString) else {return}
+        guard let url = URL(string: songKickUrl) else {return}
         
         URLSession.shared.dataTask(with: url) {(data, response, err) in
             
             guard let data = data else {return}
-            print("Printing data:")
+            print("Printing songkick data:")
+            print(String(data: data, encoding: .utf8)!)
+            
+            do {
+                let test = try JSONDecoder().decode(ResponseFromSongkick.self, from: data)
+                
+                print("Printing songkick response:")
+                print(test)
+                
+            } catch let jsonErr {
+                print("Error serializing json:", jsonErr)
+            }
+            }.resume()
+        
+    }
+    
+    func processJambaseData (zipCode: String) {
+        let now = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "YYYY-MM-DD"
+        let today = dateFormatter.string(from: now)
+        
+        let jambaseurlString = "http://api.jambase.com/events?zipCode=\(zipCode)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
+        
+        print("Jambase URL STRING ---------------------------")
+        print(jambaseurlString)
+        
+        guard let url = URL(string: jambaseurlString) else {return}
+        
+        URLSession.shared.dataTask(with: url) {(data, response, err) in
+            
+            guard let data = data else {return}
+            print("Printing jambase  data:")
             print(String(data: data, encoding: .utf8)!)
             // print(data)  /// prints bytes again :(
             
             do {
                 let test = try JSONDecoder().decode(ResponseFromJambase.self, from: data)
                 
-                print("Printing Info:")
+                print("Printing jambase Info:")
                 print(test)
                 
             } catch let jsonErr {
@@ -205,15 +247,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             }.resume()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
-    {
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         
         //////   CURRENT LOCATION /////
         
         let location = locations[0]  // most recent location
-//        print(location)
-//        print("Location above!")
-        
+
         let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
         
         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
@@ -238,7 +277,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         self.currentZip = place.postalCode!
                         
                         print(self.currentZip)   // force unwrap to avoid warning
-                        self.processEventData(zipCode: self.currentZip)
+                        self.processJambaseData(zipCode: self.currentZip)
+                        let stringLat = "\(location.coordinate.latitude)"
+                        let stringLong = "\(location.coordinate.longitude)"
+                        print("Printing String lat and long =========================== from Geodecoder ")
+                        print(stringLat)
+                        print(stringLong)
+                        self.processSongkickData(currentLat: stringLat, currentLong: stringLong)
                     }
                 }
             }
@@ -252,7 +297,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     {
         super.viewDidLoad()   // xcode version of document ready
         
-        self.processEventData(zipCode: self.currentZip)
+        self.processJambaseData(zipCode: self.currentZip)
+        self.processSongkickData(currentLat: self.currentLat, currentLong: currentLong)
         
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
