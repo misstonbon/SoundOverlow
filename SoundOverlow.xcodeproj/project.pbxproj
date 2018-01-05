@@ -14,6 +14,7 @@
 		CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB455F231FFC60B500B9D326 /* LaunchScreen.storyboard */; };
 		CB455F2E1FFC66D900B9D326 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB455F2D1FFC66D900B9D326 /* CoreLocation.framework */; };
 		CB455F531FFEB78800B9D326 /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB455F521FFEB78800B9D326 /* secrets.plist */; };
+		CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455F5420001E1800B9D326 /* songkickEvents.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		CB455F2D1FFC66D900B9D326 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		CB455F2F1FFC66E400B9D326 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CB455F521FFEB78800B9D326 /* secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
+		CB455F5420001E1800B9D326 /* songkickEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songkickEvents.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 			children = (
 				CB455F1A1FFC60B500B9D326 /* AppDelegate.swift */,
 				CB455F1C1FFC60B500B9D326 /* ViewController.swift */,
+				CB455F5420001E1800B9D326 /* songkickEvents.json */,
 				CB455F1E1FFC60B500B9D326 /* Main.storyboard */,
 				CB455F211FFC60B500B9D326 /* Assets.xcassets */,
 				CB455F231FFC60B500B9D326 /* LaunchScreen.storyboard */,
@@ -142,6 +145,7 @@
 			files = (
 				CB455F531FFEB78800B9D326 /* secrets.plist in Resources */,
 				CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */,
+				CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */,
 				CB455F221FFC60B500B9D326 /* Assets.xcassets in Resources */,
 				CB455F201FFC60B500B9D326 /* Main.storyboard in Resources */,
 			);

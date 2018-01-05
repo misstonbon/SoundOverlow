@@ -1,0 +1,1560 @@
+{
+    "resultsPage": {
+        "status": "ok",
+        "results": {
+            "event": [
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Green Frog",
+                      "lat": 48.7458109,
+                      "lng": -122.4814933,
+                      "uri": "http://www.songkick.com/venues/156673-green-frog?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 156673
+                      },
+                      "status": "cancelled",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "David Luning",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:3c5c7790-cebb-4c25-9975-ba6a900bfa90.json",
+                                                     "mbid": "3c5c7790-cebb-4c25-9975-ba6a900bfa90"
+                                                     }
+                                                     ],
+                                      "displayName": "David Luning",
+                                      "uri": "http://www.songkick.com/artists/3177776-david-luning?utm_source=47247&utm_medium=partner",
+                                      "id": 3177776
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61517074
+                                      }
+                                      ],
+                      "popularity": 0.000143,
+                      "displayName": "David Luning at Green Frog (January 26, 2018) (CANCELLED) ",
+                      "start": {
+                      "datetime": "2018-01-26T21:30:00-0800",
+                      "time": "21:30:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Bellingham, WA, US",
+                      "lat": 48.7458109,
+                      "lng": -122.4814933
+                      },
+                      "uri": "http://www.songkick.com/concerts/31889769-david-luning-at-green-frog?utm_source=47247&utm_medium=partner",
+                      "id": 31889769
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Kremwerk",
+                      "lat": 47.616869,
+                      "lng": -122.331184,
+                      "uri": "http://www.songkick.com/venues/2581003-kremwerk?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 2581003
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Jon1st",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Jon1st",
+                                      "uri": "http://www.songkick.com/artists/3736226-jon1st?utm_source=47247&utm_medium=partner",
+                                      "id": 3736226
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61968619
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Mat the Alien",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:6c58e54d-3956-4244-92fb-aed491e0cb27.json",
+                                                     "mbid": "6c58e54d-3956-4244-92fb-aed491e0cb27"
+                                                     }
+                                                     ],
+                                      "displayName": "Mat the Alien",
+                                      "uri": "http://www.songkick.com/artists/771813-mat-the-alien?utm_source=47247&utm_medium=partner",
+                                      "id": 771813
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62217084
+                                      }
+                                      ],
+                      "popularity": 0.000371,
+                      "displayName": "Jon1st and Mat the Alien at Kremwerk (January 26, 2018)",
+                      "start": {
+                      "datetime": null,
+                      "time": null,
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.616869,
+                      "lng": -122.331184
+                      },
+                      "uri": "http://www.songkick.com/concerts/32155729-jon1st-at-kremwerk?utm_source=47247&utm_medium=partner",
+                      "id": 32155729
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "The Crocodile",
+                      "lat": 47.6134145,
+                      "lng": -122.3443283,
+                      "uri": "http://www.songkick.com/venues/291-crocodile?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 291
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "The Flesh Eaters",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:9b71f55b-9e36-4527-ac7f-ab8c676c40f2.json",
+                                                     "mbid": "9b71f55b-9e36-4527-ac7f-ab8c676c40f2"
+                                                     }
+                                                     ],
+                                      "displayName": "The Flesh Eaters",
+                                      "uri": "http://www.songkick.com/artists/331681-flesh-eaters?utm_source=47247&utm_medium=partner",
+                                      "id": 331681
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 59385864
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "The Dee Dees",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "The Dee Dees",
+                                      "uri": "http://www.songkick.com/artists/6533599-dee-dees?utm_source=47247&utm_medium=partner",
+                                      "id": 6533599
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62295319
+                                      }
+                                      ],
+                      "popularity": 0.000397,
+                      "displayName": "The Flesh Eaters with The Dee Dees at The Crocodile (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T20:00:00-0800",
+                      "time": "20:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6134145,
+                      "lng": -122.3443283
+                      },
+                      "uri": "http://www.songkick.com/concerts/30676664-flesh-eaters-at-crocodile?utm_source=47247&utm_medium=partner",
+                      "id": 30676664
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Admiral Theatre",
+                      "lat": 47.5668089,
+                      "lng": -122.6271158,
+                      "uri": "http://www.songkick.com/venues/15075-admiral-theatre?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 15075
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Howard Jones",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:72448711-5c5c-4b45-a607-99336456029a.json",
+                                                     "mbid": "72448711-5c5c-4b45-a607-99336456029a"
+                                                     },
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:23b2cc78-7595-4630-bebb-a349a4f25262.json",
+                                                     "mbid": "23b2cc78-7595-4630-bebb-a349a4f25262"
+                                                     },
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:f4478aea-4bf6-4f0f-932f-5ea948e9fdfa.json",
+                                                     "mbid": "f4478aea-4bf6-4f0f-932f-5ea948e9fdfa"
+                                                     }
+                                                     ],
+                                      "displayName": "Howard Jones",
+                                      "uri": "http://www.songkick.com/artists/30089-howard-jones?utm_source=47247&utm_medium=partner",
+                                      "id": 30089
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61378354
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "Rachael Sage",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:eb5decb4-954a-4a96-a3df-00cdde7ec5ea.json",
+                                                     "mbid": "eb5decb4-954a-4a96-a3df-00cdde7ec5ea"
+                                                     }
+                                                     ],
+                                      "displayName": "Rachael Sage",
+                                      "uri": "http://www.songkick.com/artists/432317-rachael-sage?utm_source=47247&utm_medium=partner",
+                                      "id": 432317
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 61378359
+                                      }
+                                      ],
+                      "popularity": 0.027577,
+                      "displayName": "Howard Jones with Rachael Sage at Admiral Theatre (January 26, 2018)",
+                      "start": {
+                      "datetime": null,
+                      "time": null,
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Bremerton, WA, US",
+                      "lat": 47.5668089,
+                      "lng": -122.6271158
+                      },
+                      "uri": "http://www.songkick.com/concerts/31807614-howard-jones-at-admiral-theatre?utm_source=47247&utm_medium=partner",
+                      "id": 31807614
+                      },
+                      {
+                      "type": "Concert",
+                      "popularity": 0.046482,
+                      "displayName": "Surfer Blood with Terry Malts at The Shakedown (January 26, 2018)",
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "displayName": "Surfer Blood",
+                                      "billingIndex": 1,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "Surfer Blood",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:f11ab2aa-4a60-49b2-b37b-505a05b5d179.json",
+                                                     "mbid": "f11ab2aa-4a60-49b2-b37b-505a05b5d179"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/2562891-surfer-blood?utm_source=47247&utm_medium=partner",
+                                      "id": 2562891
+                                      },
+                                      "id": 61963944
+                                      },
+                                      {
+                                      "displayName": "Terry Malts",
+                                      "billingIndex": 2,
+                                      "billing": "support",
+                                      "artist": {
+                                      "displayName": "Terry Malts",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:3f202a5e-f720-4e94-a70b-3dfb30480dad.json",
+                                                     "mbid": "3f202a5e-f720-4e94-a70b-3dfb30480dad"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/3177951-terry-malts?utm_source=47247&utm_medium=partner",
+                                      "id": 3177951
+                                      },
+                                      "id": 61963949
+                                      }
+                                      ],
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": "2018-01-26T22:00:00-0800",
+                      "time": "22:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "city": "Bellingham, WA, US",
+                      "lat": 48.747541,
+                      "lng": -122.477788
+                      },
+                      "uri": "http://www.songkick.com/concerts/32152899-surfer-blood-at-shakedown?utm_source=47247&utm_medium=partner",
+                      "id": 32152899,
+                      "venue": {
+                      "displayName": "The Shakedown",
+                      "lat": 48.747541,
+                      "lng": -122.477788,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "uri": "http://www.songkick.com/venues/1262686-shakedown?utm_source=47247&utm_medium=partner",
+                      "id": 1262686
+                      }
+                      },
+                      {
+                      "type": "Concert",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Cash'd Out",
+                                      "billingIndex": 1,
+                                      "artist": {
+                                      "displayName": "Cash'd Out",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:b79ace11-61bf-4b47-b729-d4d553322953.json",
+                                                     "mbid": "b79ace11-61bf-4b47-b729-d4d553322953"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/441845-cashd-out?utm_source=47247&utm_medium=partner",
+                                      "id": 441845
+                                      },
+                                      "id": 60632034
+                                      }
+                                      ],
+                      "popularity": 0.000189,
+                      "displayName": "Cash'd Out at The Tractor Tavern (January 26, 2018)",
+                      "status": "ok",
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": "2018-01-26T19:00:00-0800",
+                      "time": "19:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "lat": 47.6657641,
+                      "lng": -122.382626,
+                      "city": "Seattle, WA, US"
+                      },
+                      "venue": {
+                      "displayName": "The Tractor Tavern",
+                      "lat": 47.6657641,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "lng": -122.382626,
+                      "uri": "http://www.songkick.com/venues/247-tractor-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 247
+                      },
+                      "uri": "http://www.songkick.com/concerts/31371914-cashd-out-at-tractor-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 31371914
+                      },
+                      {
+                      "type": "Concert",
+                      "popularity": 0.00148,
+                      "displayName": "MAGIC GIANT with The Brevet at Barboza (January 26, 2018)",
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "displayName": "MAGIC GIANT",
+                                      "billingIndex": 1,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "MAGIC GIANT",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:9b8314cb-a5c0-4c51-8d95-5871eb3d2088.json",
+                                                     "mbid": "9b8314cb-a5c0-4c51-8d95-5871eb3d2088"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/7880064-magic-giant?utm_source=47247&utm_medium=partner",
+                                      "id": 7880064
+                                      },
+                                      "id": 61557024
+                                      },
+                                      {
+                                      "displayName": "The Brevet",
+                                      "billingIndex": 2,
+                                      "billing": "support",
+                                      "artist": {
+                                      "displayName": "The Brevet",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:7a12c8a8-42cf-47b6-bcc6-e0047cae1ab5.json",
+                                                     "mbid": "7a12c8a8-42cf-47b6-bcc6-e0047cae1ab5"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/3340486-brevet?utm_source=47247&utm_medium=partner",
+                                      "id": 3340486
+                                      },
+                                      "id": 61557019
+                                      }
+                                      ],
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": "2018-01-26T19:30:00-0800",
+                      "time": "19:30:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6140125,
+                      "lng": -122.3200355
+                      },
+                      "uri": "http://www.songkick.com/concerts/31912919-magic-giant-at-barboza?utm_source=47247&utm_medium=partner",
+                      "id": 31912919,
+                      "venue": {
+                      "displayName": "Barboza",
+                      "lat": 47.6140125,
+                      "lng": -122.3200355,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "uri": "http://www.songkick.com/venues/1674423-barboza?utm_source=47247&utm_medium=partner",
+                      "id": 1674423
+                      }
+                      },
+                      {
+                      "type": "Concert",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Cash'd Out",
+                                      "billingIndex": 1,
+                                      "artist": {
+                                      "displayName": "Cash'd Out",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:b79ace11-61bf-4b47-b729-d4d553322953.json",
+                                                     "mbid": "b79ace11-61bf-4b47-b729-d4d553322953"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/441845-cashd-out?utm_source=47247&utm_medium=partner",
+                                      "id": 441845
+                                      },
+                                      "id": 60632039
+                                      }
+                                      ],
+                      "popularity": 0.000189,
+                      "displayName": "Cash'd Out at The Tractor Tavern (January 26, 2018)",
+                      "status": "ok",
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": "2018-01-26T23:00:00-0800",
+                      "time": "23:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "lat": 47.6657641,
+                      "lng": -122.382626,
+                      "city": "Seattle, WA, US"
+                      },
+                      "venue": {
+                      "displayName": "The Tractor Tavern",
+                      "lat": 47.6657641,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "lng": -122.382626,
+                      "uri": "http://www.songkick.com/venues/247-tractor-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 247
+                      },
+                      "uri": "http://www.songkick.com/concerts/31371919-cashd-out-at-tractor-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 31371919
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Foundation Nightclub",
+                      "lat": 47.6123456,
+                      "lng": -122.3465061,
+                      "uri": "http://www.songkick.com/venues/1934839-foundation-nightclub?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 1934839
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Etc! Etc!",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:76094efb-678c-4a71-ae4c-96cad4a09f49.json",
+                                                     "mbid": "76094efb-678c-4a71-ae4c-96cad4a09f49"
+                                                     }
+                                                     ],
+                                      "displayName": "Etc! Etc!",
+                                      "uri": "http://www.songkick.com/artists/3003951-etc-etc?utm_source=47247&utm_medium=partner",
+                                      "id": 3003951
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62317114
+                                      }
+                                      ],
+                      "popularity": 0.002943,
+                      "displayName": "Etc! Etc! at Foundation Nightclub (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T22:00:00-0800",
+                      "time": "22:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6123456,
+                      "lng": -122.3465061
+                      },
+                      "uri": "http://www.songkick.com/concerts/32356639-etc-etc-at-foundation-nightclub?utm_source=47247&utm_medium=partner",
+                      "id": 32356639
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Neumos Crystal Ball Reading Room",
+                      "lat": 47.6140125,
+                      "lng": -122.3200355,
+                      "uri": "http://www.songkick.com/venues/1163-neumos-crystal-ball-reading-room?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 1163
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Lil Xan",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:986e466c-7efb-49cc-8034-d05a4af5ab75.json",
+                                                     "mbid": "986e466c-7efb-49cc-8034-d05a4af5ab75"
+                                                     }
+                                                     ],
+                                      "displayName": "Lil Xan",
+                                      "uri": "http://www.songkick.com/artists/9257794-lil-xan?utm_source=47247&utm_medium=partner",
+                                      "id": 9257794
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62125554
+                                      }
+                                      ],
+                      "popularity": 0.002445,
+                      "displayName": "Lil Xan at Neumos Crystal Ball Reading Room (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T20:00:00-0800",
+                      "time": "20:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6140125,
+                      "lng": -122.3200355
+                      },
+                      "uri": "http://www.songkick.com/concerts/32247214-lil-xan-at-neumos-crystal-ball-reading-room?utm_source=47247&utm_medium=partner",
+                      "id": 32247214
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Heylo Cannabis Lab",
+                      "lat": 47.573926,
+                      "lng": -122.3329089,
+                      "uri": "http://www.songkick.com/venues/3714774-heylo-cannabis-lab?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 3714774
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Motus",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:c61f5a3a-3d43-4633-90d4-c1c7d5425b6b.json",
+                                                     "mbid": "c61f5a3a-3d43-4633-90d4-c1c7d5425b6b"
+                                                     },
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:d4f33510-91f6-405f-8c31-5be57812f2c1.json",
+                                                     "mbid": "d4f33510-91f6-405f-8c31-5be57812f2c1"
+                                                     },
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:70b15057-02ca-4e07-b2fa-03e7d4106566.json",
+                                                     "mbid": "70b15057-02ca-4e07-b2fa-03e7d4106566"
+                                                     }
+                                                     ],
+                                      "displayName": "Motus",
+                                      "uri": "http://www.songkick.com/artists/224718-motus?utm_source=47247&utm_medium=partner",
+                                      "id": 224718
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62192169
+                                      }
+                                      ],
+                      "popularity": 0.00005,
+                      "displayName": "Motus at Heylo Cannabis Lab (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T18:30:00-0800",
+                      "time": "18:30:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.573926,
+                      "lng": -122.3329089
+                      },
+                      "uri": "http://www.songkick.com/concerts/32284899-motus-at-heylo-cannabis-lab?utm_source=47247&utm_medium=partner",
+                      "id": 32284899
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "The Underground",
+                      "lat": 47.6010893,
+                      "lng": -122.3331086,
+                      "uri": "http://www.songkick.com/venues/72182-underground?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 72182
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Mark Sixma",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:73e17e61-3a7a-4653-a642-71a269e0ae84.json",
+                                                     "mbid": "73e17e61-3a7a-4653-a642-71a269e0ae84"
+                                                     }
+                                                     ],
+                                      "displayName": "Mark Sixma",
+                                      "uri": "http://www.songkick.com/artists/5388953-mark-sixma?utm_source=47247&utm_medium=partner",
+                                      "id": 5388953
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62067834
+                                      }
+                                      ],
+                      "popularity": 0.00345,
+                      "displayName": "Mark Sixma at The Underground (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T22:00:00-0800",
+                      "time": "22:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6010893,
+                      "lng": -122.3331086
+                      },
+                      "uri": "http://www.songkick.com/concerts/32214269-mark-sixma-at-underground?utm_source=47247&utm_medium=partner",
+                      "id": 32214269
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Sunset Tavern",
+                      "lat": 47.6681889,
+                      "lng": -122.3858426,
+                      "uri": "http://www.songkick.com/venues/5812-sunset-tavern?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 5812
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "The Octopus Project",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:aaf92b5a-199c-4b1b-969d-7a915ffb6f0f.json",
+                                                     "mbid": "aaf92b5a-199c-4b1b-969d-7a915ffb6f0f"
+                                                     }
+                                                     ],
+                                      "displayName": "The Octopus Project",
+                                      "uri": "http://www.songkick.com/artists/300530-octopus-project?utm_source=47247&utm_medium=partner",
+                                      "id": 300530
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61769394
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "The Hoot Hoots",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:7da14c79-d154-4005-88fb-33ce9153c03b.json",
+                                                     "mbid": "7da14c79-d154-4005-88fb-33ce9153c03b"
+                                                     }
+                                                     ],
+                                      "displayName": "The Hoot Hoots",
+                                      "uri": "http://www.songkick.com/artists/1136935-hoot-hoots?utm_source=47247&utm_medium=partner",
+                                      "id": 1136935
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62168859
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "New Fumes",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:a1cb4f15-13df-4d58-b85d-f6d1e1a21ffd.json",
+                                                     "mbid": "a1cb4f15-13df-4d58-b85d-f6d1e1a21ffd"
+                                                     }
+                                                     ],
+                                      "displayName": "New Fumes",
+                                      "uri": "http://www.songkick.com/artists/2831176-new-fumes?utm_source=47247&utm_medium=partner",
+                                      "id": 2831176
+                                      },
+                                      "billingIndex": 3,
+                                      "id": 62168864
+                                      }
+                                      ],
+                      "popularity": 0.006922,
+                      "displayName": "The Octopus Project with The Hoot Hoots and New Fumes at Sunset Tavern (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T20:30:00-0800",
+                      "time": "20:30:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6681889,
+                      "lng": -122.3858426
+                      },
+                      "uri": "http://www.songkick.com/concerts/32039049-octopus-project-at-sunset-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 32039049
+                      },
+                      {
+                      "type": "Concert",
+                      "popularity": 0.000011,
+                      "displayName": "Nails Hide Metal and Sleeping Planet at Skylark Cafe & Club (January 26, 2018)",
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "displayName": "Nails Hide Metal",
+                                      "billingIndex": 1,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "Nails Hide Metal",
+                                      "identifier": [],
+                                      "uri": "http://www.songkick.com/artists/5537463-nails-hide-metal?utm_source=47247&utm_medium=partner",
+                                      "id": 5537463
+                                      },
+                                      "id": 61842484
+                                      },
+                                      {
+                                      "displayName": "Sleeping Planet",
+                                      "billingIndex": 2,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "Sleeping Planet",
+                                      "identifier": [],
+                                      "uri": "http://www.songkick.com/artists/8798559-sleeping-planet?utm_source=47247&utm_medium=partner",
+                                      "id": 8798559
+                                      },
+                                      "id": 61842489
+                                      }
+                                      ],
+                      "ageRestriction": "21+",
+                      "start": {
+                      "datetime": "2018-01-26T20:00:00-0800",
+                      "time": "20:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.570169,
+                      "lng": -122.3621832
+                      },
+                      "uri": "http://www.songkick.com/concerts/32082664-nails-hide-metal-at-skylark-cafe-and-club?utm_source=47247&utm_medium=partner",
+                      "id": 32082664,
+                      "venue": {
+                      "displayName": "Skylark Cafe & Club",
+                      "lat": 47.570169,
+                      "lng": -122.3621832,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "uri": "http://www.songkick.com/venues/468486-skylark-cafe-and-club?utm_source=47247&utm_medium=partner",
+                      "id": 468486
+                      }
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "displayName": "Hard Rock Café - Seattle",
+                      "lat": 47.6089734,
+                      "uri": "http://www.songkick.com/venues/873881-hard-rock-cafe-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 873881,
+                      "lng": -122.3396518
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "billingIndex": 1,
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Zabadaba",
+                                      "uri": "http://www.songkick.com/artists/9203499-zabadaba?utm_source=47247&utm_medium=partner",
+                                      "id": 9203499
+                                      },
+                                      "displayName": "Zabadaba",
+                                      "id": 60341284
+                                      }
+                                      ],
+                      "ageRestriction": null,
+                      "popularity": 0,
+                      "start": {
+                      "datetime": "2018-01-26T19:00:00-0800",
+                      "time": "19:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "displayName": "Zabadaba at Hard Rock Café - Seattle (January 26, 2018)",
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6089734,
+                      "lng": -122.3396518
+                      },
+                      "uri": "http://www.songkick.com/concerts/31207254-zabadaba-at-hard-rock-cafe-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 31207254
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "The Funhouse",
+                      "lat": 47.6186334,
+                      "lng": -122.3293734,
+                      "uri": "http://www.songkick.com/venues/11594-funhouse?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 11594
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Wanting",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:03616770-d402-4b1f-8c40-d33948430370.json",
+                                                     "mbid": "03616770-d402-4b1f-8c40-d33948430370"
+                                                     }
+                                                     ],
+                                      "displayName": "Wanting",
+                                      "uri": "http://www.songkick.com/artists/642497-wanting?utm_source=47247&utm_medium=partner",
+                                      "id": 642497
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62298929
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "As Pillars Fall",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "As Pillars Fall",
+                                      "uri": "http://www.songkick.com/artists/9265099-as-pillars-fall?utm_source=47247&utm_medium=partner",
+                                      "id": 9265099
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62298934
+                                      }
+                                      ],
+                      "popularity": 0.001096,
+                      "displayName": "Wanting with As Pillars Fall at The Funhouse (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T19:00:00-0800",
+                      "time": "19:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6186334,
+                      "lng": -122.3293734
+                      },
+                      "uri": "http://www.songkick.com/concerts/32346464-wanting-at-funhouse?utm_source=47247&utm_medium=partner",
+                      "id": 32346464
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Parliament Tavern",
+                      "lat": 47.5814439,
+                      "lng": -122.3857257,
+                      "uri": "http://www.songkick.com/venues/3111789-parliament-tavern?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 3111789
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Saint John And The Revelations",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Saint John And The Revelations",
+                                      "uri": "http://www.songkick.com/artists/284227-saint-john-and-the-revelations?utm_source=47247&utm_medium=partner",
+                                      "id": 284227
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62346449
+                                      }
+                                      ],
+                      "popularity": 0.00005,
+                      "displayName": "Saint John And The Revelations at Parliament Tavern (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T20:00:00-0800",
+                      "time": "20:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.5814439,
+                      "lng": -122.3857257
+                      },
+                      "uri": "http://www.songkick.com/concerts/32375124-saint-john-and-the-revelations-at-parliament-tavern?utm_source=47247&utm_medium=partner",
+                      "id": 32375124
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Nectar Lounge",
+                      "lat": 47.6521845,
+                      "lng": -122.3538836,
+                      "uri": "http://www.songkick.com/venues/11589-nectar-lounge?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 11589
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Karl Denson's Tiny Universe",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:ff24a74c-237b-481b-adb5-7f4f6171f5f5.json",
+                                                     "mbid": "ff24a74c-237b-481b-adb5-7f4f6171f5f5"
+                                                     }
+                                                     ],
+                                      "displayName": "Karl Denson's Tiny Universe",
+                                      "uri": "http://www.songkick.com/artists/159478-karl-densons-tiny-universe?utm_source=47247&utm_medium=partner",
+                                      "id": 159478
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61533594
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "Dip",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:7f86e0df-5395-43f2-bdf0-3c51f64b5013.json",
+                                                     "mbid": "7f86e0df-5395-43f2-bdf0-3c51f64b5013"
+                                                     },
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:a6a1bb5f-c687-49a9-ab75-a5f2de6f9b45.json",
+                                                     "mbid": "a6a1bb5f-c687-49a9-ab75-a5f2de6f9b45"
+                                                     }
+                                                     ],
+                                      "displayName": "Dip",
+                                      "uri": "http://www.songkick.com/artists/190471-dip?utm_source=47247&utm_medium=partner",
+                                      "id": 190471
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62127974
+                                      }
+                                      ],
+                      "popularity": 0.002963,
+                      "displayName": "Karl Denson's Tiny Universe with Dip at Nectar Lounge (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T20:00:00-0800",
+                      "time": "20:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6521845,
+                      "lng": -122.3538836
+                      },
+                      "uri": "http://www.songkick.com/concerts/31899434-karl-densons-tiny-universe-at-nectar-lounge?utm_source=47247&utm_medium=partner",
+                      "id": 31899434
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Neptune Theatre",
+                      "lat": 47.6612806,
+                      "lng": -122.3136475,
+                      "uri": "http://www.songkick.com/venues/1276526-neptune-theatre?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 1276526
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "MATOMA",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:0cde42f7-751c-4fac-a1d3-627392e5bc82.json",
+                                                     "mbid": "0cde42f7-751c-4fac-a1d3-627392e5bc82"
+                                                     }
+                                                     ],
+                                      "displayName": "MATOMA",
+                                      "uri": "http://www.songkick.com/artists/8402103-matoma?utm_source=47247&utm_medium=partner",
+                                      "id": 8402103
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 61440619
+                                      },
+                                      {
+                                      "billing": "support",
+                                      "displayName": "Two Friends",
+                                      "artist": {
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:9f8e8bae-9515-4834-ba36-b334335461dd.json",
+                                                     "mbid": "9f8e8bae-9515-4834-ba36-b334335461dd"
+                                                     }
+                                                     ],
+                                      "displayName": "Two Friends",
+                                      "uri": "http://www.songkick.com/artists/8423523-two-friends?utm_source=47247&utm_medium=partner",
+                                      "id": 8423523
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 61440624
+                                      }
+                                      ],
+                      "popularity": 0.035309,
+                      "displayName": "MATOMA with Two Friends at Neptune Theatre (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T21:00:00-0800",
+                      "time": "21:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6612806,
+                      "lng": -122.3136475
+                      },
+                      "uri": "http://www.songkick.com/concerts/31843019-matoma-at-neptune-theatre?utm_source=47247&utm_medium=partner",
+                      "id": 31843019
+                      },
+                      {
+                      "type": "Festival",
+                      "popularity": 0.000013,
+                      "displayName": "Timbrrr Winter Music Festival 2018",
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "displayName": "The Black Tones",
+                                      "billingIndex": 1,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "The Black Tones",
+                                      "identifier": [],
+                                      "uri": "http://www.songkick.com/artists/5119853-black-tones?utm_source=47247&utm_medium=partner",
+                                      "id": 5119853
+                                      },
+                                      "id": 61980734
+                                      }
+                                      ],
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": null,
+                      "time": null,
+                      "date": "2018-01-26"
+                      },
+                      "end": {
+                      "datetime": null,
+                      "time": null,
+                      "date": "2018-01-27"
+                      },
+                      "series": {
+                      "displayName": "Timbrrr Winter Music Festival"
+                      },
+                      "location": {
+                      "city": "Leavenworth, WA, US",
+                      "lat": 47.5962326,
+                      "lng": -120.6614765
+                      },
+                      "uri": "http://www.songkick.com/festivals/883024-timbrrr-winter-music/id/32162679-timbrrr-winter-music-festival-2018?utm_source=47247&utm_medium=partner",
+                      "id": 32162679,
+                      "venue": {
+                      "displayName": "Unknown venue",
+                      "lat": 47.5962326,
+                      "lng": -120.6614765,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "uri": null,
+                      "id": null
+                      }
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Highline",
+                      "lat": 47.6286702,
+                      "lng": -122.321256,
+                      "uri": "http://www.songkick.com/venues/1163446-highline?utm_source=47247&utm_medium=partner",
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": 1163446
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Simple Minded Symphony",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Simple Minded Symphony",
+                                      "uri": "http://www.songkick.com/artists/7347489-simple-minded-symphony?utm_source=47247&utm_medium=partner",
+                                      "id": 7347489
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62196999
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Deschamp",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Deschamp",
+                                      "uri": "http://www.songkick.com/artists/8801924-deschamp?utm_source=47247&utm_medium=partner",
+                                      "id": 8801924
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62197004
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Bear Dance",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Bear Dance",
+                                      "uri": "http://www.songkick.com/artists/9240169-bear-dance?utm_source=47247&utm_medium=partner",
+                                      "id": 9240169
+                                      },
+                                      "billingIndex": 3,
+                                      "id": 62197009
+                                      }
+                                      ],
+                      "popularity": 0.000009,
+                      "displayName": "Simple Minded Symphony, Deschamp, and Bear Dance at Highline (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T21:00:00-0800",
+                      "time": "21:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6286702,
+                      "lng": -122.321256
+                      },
+                      "uri": "http://www.songkick.com/concerts/32288119-simple-minded-symphony-at-highline?utm_source=47247&utm_medium=partner",
+                      "id": 32288119
+                      },
+                      {
+                      "type": "Concert",
+                      "venue": {
+                      "displayName": "Unknown venue",
+                      "lat": null,
+                      "lng": null,
+                      "uri": null,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "id": null
+                      },
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Depressica",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Depressica",
+                                      "uri": "http://www.songkick.com/artists/9176669-depressica?utm_source=47247&utm_medium=partner",
+                                      "id": 9176669
+                                      },
+                                      "billingIndex": 1,
+                                      "id": 62289864
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Ketamine Cat",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Ketamine Cat",
+                                      "uri": "http://www.songkick.com/artists/9346599-ketamine-cat?utm_source=47247&utm_medium=partner",
+                                      "id": 9346599
+                                      },
+                                      "billingIndex": 2,
+                                      "id": 62289869
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Caroline! (WA)",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Caroline! (WA)",
+                                      "uri": "http://www.songkick.com/artists/9346604-caroline-wa?utm_source=47247&utm_medium=partner",
+                                      "id": 9346604
+                                      },
+                                      "billingIndex": 3,
+                                      "id": 62289874
+                                      },
+                                      {
+                                      "billing": "headline",
+                                      "displayName": "Nessa",
+                                      "artist": {
+                                      "identifier": [],
+                                      "displayName": "Nessa",
+                                      "uri": "http://www.songkick.com/artists/8524803-nessa?utm_source=47247&utm_medium=partner",
+                                      "id": 8524803
+                                      },
+                                      "billingIndex": 4,
+                                      "id": 62289879
+                                      }
+                                      ],
+                      "popularity": 0.000024,
+                      "displayName": "Depressica, Ketamine Cat, Caroline! (WA), and Nessa at Unknown venue (January 26, 2018)",
+                      "start": {
+                      "datetime": "2018-01-26T19:00:00-0800",
+                      "time": "19:00:00",
+                      "date": "2018-01-26"
+                      },
+                      "ageRestriction": null,
+                      "location": {
+                      "city": "Burien, WA, US",
+                      "lat": 47.4682,
+                      "lng": -122.345
+                      },
+                      "uri": "http://www.songkick.com/concerts/32341894-depressica-at-unknown-venue?utm_source=47247&utm_medium=partner",
+                      "id": 32341894
+                      },
+                      {
+                      "type": "Concert",
+                      "popularity": 0.002517,
+                      "displayName": "Rebel Souljahz, The Steppas, and CRSB at The Showbox (January 26, 2018)",
+                      "status": "ok",
+                      "performance": [
+                                      {
+                                      "displayName": "Rebel Souljahz",
+                                      "billingIndex": 1,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "Rebel Souljahz",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:5133141a-fcf0-4d09-a728-16d01f27fd53.json",
+                                                     "mbid": "5133141a-fcf0-4d09-a728-16d01f27fd53"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/1735120-rebel-souljahz?utm_source=47247&utm_medium=partner",
+                                      "id": 1735120
+                                      },
+                                      "id": 61357009
+                                      },
+                                      {
+                                      "displayName": "The Steppas",
+                                      "billingIndex": 2,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "The Steppas",
+                                      "identifier": [
+                                                     {
+                                                     "href": "http://api.songkick.com/api/3.0/artists/mbid:e1a2eafa-3530-4293-a321-905407180620.json",
+                                                     "mbid": "e1a2eafa-3530-4293-a321-905407180620"
+                                                     }
+                                                     ],
+                                      "uri": "http://www.songkick.com/artists/6317464-steppas?utm_source=47247&utm_medium=partner",
+                                      "id": 6317464
+                                      },
+                                      "id": 61512754
+                                      },
+                                      {
+                                      "displayName": "CRSB",
+                                      "billingIndex": 3,
+                                      "billing": "headline",
+                                      "artist": {
+                                      "displayName": "CRSB",
+                                      "identifier": [],
+                                      "uri": "http://www.songkick.com/artists/5201493-crsb?utm_source=47247&utm_medium=partner",
+                                      "id": 5201493
+                                      },
+                                      "id": 61512759
+                                      }
+                                      ],
+                      "ageRestriction": null,
+                      "start": {
+                      "datetime": "2018-01-26T19:30:00-0800",
+                      "time": "19:30:00",
+                      "date": "2018-01-26"
+                      },
+                      "location": {
+                      "city": "Seattle, WA, US",
+                      "lat": 47.6087897,
+                      "lng": -122.3399932
+                      },
+                      "uri": "http://www.songkick.com/concerts/31795624-rebel-souljahz-at-showbox?utm_source=47247&utm_medium=partner",
+                      "id": 31795624,
+                      "venue": {
+                      "displayName": "The Showbox",
+                      "lat": 47.6087897,
+                      "lng": -122.3399932,
+                      "metroArea": {
+                      "displayName": "Seattle",
+                      "country": {
+                      "displayName": "US"
+                      },
+                      "uri": "http://www.songkick.com/metro_areas/2846-us-seattle?utm_source=47247&utm_medium=partner",
+                      "id": 2846,
+                      "state": {
+                      "displayName": "WA"
+                      }
+                      },
+                      "uri": "http://www.songkick.com/venues/5621-showbox?utm_source=47247&utm_medium=partner",
+                      "id": 5621
+                      }
+                      }
+                      ]
+        },
+        "perPage": 50,
+        "page": 1,
+        "totalEntries": 23,
+        "clientLocation": {
+            "ip": null,
+            "lat": 47.6062,
+            "lng": -122.3321,
+            "metroAreaId": 2846
+        }
+    }
+}
