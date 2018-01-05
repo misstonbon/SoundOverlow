@@ -22,39 +22,43 @@ let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
 
 ///// PARSING JSON  //////
 
+struct ResponseFromJson: Decodable {
+    let Info: Info
+    let Events: [Event]
+}
+
 struct Info: Decodable {
-   let TotalResults: Int?
-   let PageNumber: Int?
+   let TotalResults: Int
+   let PageNumber: Int
    let Message: String?
-   let Events: [Event]
 }
 
 struct Event: Decodable {
-    let Id: Int?
-    let Date: String?
+    let Id: Int
+    let Date: String
+    let Venue: Venue
     let Artists: [Artist]
-    let TicketUrl: String?
-//    let Venue: Venue
+    let TicketUrl: String
 }
 
-//struct Venue: Decodable {
-//    let Id: Int?
-//    let Name: String?
-//    let Address: String?
-//    let City: String?
-//    let State: String?
-//    let StateCode: String?
-//    let Country: String?
-//    let CountryCode: String?
-//    let Zipcode: String?
-//    let Eventurl: String?
-//    let Latitude: Double?
-//    let Longitude: Double?
-//}
+struct Venue: Decodable {
+    let Id: Int
+    let Name: String
+    let Address: String
+    let City: String
+    let State: String
+    let StateCode: String
+    let Country: String
+    let CountryCode: String
+    let ZipCode: String
+    let Eventurl: String
+    let Latitude: Double
+    let Longitude: Double
+}
 
 struct Artist: Decodable {
-    let Id: Int?
-    let Name: String?
+    let Id: Int
+    let Name: String
 }
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
@@ -127,8 +131,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         
         let jsonurlString = "http://api.jambase.com/events?zipCode=\(currentZip)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
+        
+            print("JSON URL STRING ---------------------------")
+        
         print(jsonurlString)
-        print("JSON URL STRING YO")
+    
         
         guard let url = URL(string: jsonurlString) else {return}
         
@@ -137,10 +144,13 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             guard let data = data else {return}
             print("Printing data:")
             print(String(data: data, encoding: .utf8)!)
+           // print(data)  /// prints bytes again :(
             
             do {
-                let test = try JSONDecoder().decode([Event].self, from: data)
+                let test = try JSONDecoder().decode(Info.self, from: data)
+                print("Printing Info:")
                 print(test)
+                
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
             }
