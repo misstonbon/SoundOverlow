@@ -179,6 +179,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let testLat = 47.6062
     let testLong = -122.3321
     
+    var eventPins = [MKAnnotation]()
     
 ////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
@@ -206,10 +207,32 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             print(String(data: data, encoding: .utf8)!)
             
             do {
-                let test = try JSONDecoder().decode(ResponseFromSongkick.self, from: data)
+                let data = try JSONDecoder().decode(ResponseFromSongkick.self, from: data)
                 
                 print("Printing songkick response:")
-                print(test)
+                print(data)
+                
+                //// ADD PINS //////
+                
+                if self.eventPins.count > 0 {
+                    self.map.removeAnnotations(self.eventPins)
+                }
+                
+                self.eventPins.removeAll()
+                
+                let events = data.resultsPage.results.event;
+                
+                for event in events {
+                    let eventPin = Concert(title: event.displayName, locationName: event.venue.displayName, coordinate: CLLocationCoordinate2D(latitude: event.location.lat!, longitude: event.location.lng!))
+                    
+                    self.eventPins.append(eventPin)
+                }
+                
+                // adjust zoom
+                self.map.addAnnotations(self.eventPins)
+                self.map.showAnnotations(self.eventPins, animated: true)
+                
+                //// END ADD PINS /////
                 
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
@@ -258,17 +281,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         let location = locations[0]  // most recent location
 
-        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
-        
-        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
-        
-        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)  //sets region based on location and span
-        
-        map.setRegion(region, animated: true)  // shows blue dot blinking
-        
         self.map.showsUserLocation = true // shows blue dot
         
-
 //////////////////////////////////// GEOCODER - REVERSE ZIPCODE LOOKUP  ///////////////////////////////////
         
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in //placemark keeps track of all addresses in location and extracts
@@ -280,6 +294,14 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 if let place = placemark?[0] { // most recent placemark
                     if self.currentZip != place.postalCode! {
                         self.currentZip = place.postalCode!
+                        
+                        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
+                        
+                        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+                        
+                        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)  //sets region based on location and span
+                        
+                        self.map.setRegion(region, animated: true)  // shows blue dot blinking
                         
                         print(self.currentZip)   // force unwrap to avoid warning
                         self.processJambaseData(zipCode: self.currentZip)
@@ -309,16 +331,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
         manager.startUpdatingLocation()  // updates location constantly
         
-        //// SAMPLE PIN //////
+        // CONFIG MAP
         
-        let sampleStarbucks  = Concert(title: "Some Sbux", locationName: "Some location", coordinate: CLLocationCoordinate2D(latitude: 47.6062, longitude: -122.3321))
-            
-        map.addAnnotation(sampleStarbucks)
         map.delegate = self
         
-        
-        //// END SAMPLE PIN /////
-        
+        // END CONFIG MAP
     }
 }
 
