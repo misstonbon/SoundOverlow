@@ -328,9 +328,10 @@ extension ViewController : MKMapViewDelegate
 {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
     {
-        // MKAnnotation is a protocol that requires title and subtitle
-        if let annotation = annotation as? Concert {
-            let identifier  = "pin"
+        // MKAnnotation is a protocol that requires title and subtitle, that's why we have to have both
+        
+        if let annotation = annotation as? Concert { // using Concert class
+            let identifier  = "pin"  // below setup is so that clicking on pins can dequeue current view and queue up the next one 
             var view: MKPinAnnotationView
             if let dequeuedView =
                 mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
