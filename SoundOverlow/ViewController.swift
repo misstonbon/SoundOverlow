@@ -175,6 +175,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let currentLat = "47.6062"
     let currentLong = "-122.3321"
     
+    
+    let testLat = 47.6062
+    let testLong = -122.3321
+    
+    
 ////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
     func processSongkickData(currentLat: String, currentLong: String ) {
@@ -303,6 +308,43 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyBest  // accuracy
         manager.requestWhenInUseAuthorization()   // user has to agree to use data when using app
         manager.startUpdatingLocation()  // updates location constantly
+        
+        //// SAMPLE PIN //////
+        
+        let sampleStarbucks  = Concert(title: "Some Sbux", locationName: "Some location", coordinate: CLLocationCoordinate2D(latitude: 47.6062, longitude: -122.3321))
+            
+        map.addAnnotation(sampleStarbucks)
+        map.delegate = self
+        
+        
+        //// END SAMPLE PIN /////
+        
+    }
+}
+
+///// Gives map view for annotation /////
+
+extension ViewController : MKMapViewDelegate
+{
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?
+    {
+        // MKAnnotation is a protocol that requires title and subtitle
+        if let annotation = annotation as? Concert {
+            let identifier  = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView =
+                mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
+            }
+            return view
+        }
+        return nil
     }
 }
 
