@@ -64,7 +64,7 @@ struct Artist: Decodable {
     let Name: String
 }
 
-////////////////////////////////// PARSES SONGKICK JSON ///////////////////////////////////////////////////////////////
+////////////////////////////////// PARSES SONGKICK JSON //////////////////////////////////
 
 struct ResponseFromSongkick: Decodable {
    let resultsPage: Results
@@ -175,13 +175,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     let currentLat = "47.6062"
     let currentLong = "-122.3321"
     
-    
-    let testLat = 47.6062
-    let testLong = -122.3321
-    
     var eventPins = [MKAnnotation]()
     
-////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
+    
+    ////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
     func processSongkickData(currentLat: String, currentLong: String ) {
         
@@ -241,7 +238,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-//////////////////////////////  JAMBASE JSON PARSING FUNCTION ////////////////////////////////////////////////////////////
+///////////////////////  JAMBASE JSON PARSING FUNCTION ////////////////////////////
     
     func processJambaseData (zipCode: String) {
         let now = Date()
@@ -283,7 +280,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
         self.map.showsUserLocation = true // shows blue dot
         
-//////////////////////////////////// GEOCODER - REVERSE ZIPCODE LOOKUP  ///////////////////////////////////
+//////////////////////////////////// GEOCODER - REVERSE ZIPCODE LOOKUP  /////////////////////
         
         CLGeocoder().reverseGeocodeLocation(location) { (placemark, error) in //placemark keeps track of all addresses in location and extracts
             if error != nil {
@@ -317,12 +314,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
-////////////////////////////////////////// VIEW DID LOAD //////////////////////////////////////////
+////////////////////////////////////////// VIEW DID LOAD /////////////////////////
     
     override func viewDidLoad()
     {
-        super.viewDidLoad()   // xcode version of document ready
-        
+        super.viewDidLoad()
+
         self.processJambaseData(zipCode: self.currentZip)
         self.processSongkickData(currentLat: self.currentLat, currentLong: self.currentLong)
         
@@ -337,6 +334,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         // END CONFIG MAP
     }
+
 }
 
 ///// Gives map view for annotation /////

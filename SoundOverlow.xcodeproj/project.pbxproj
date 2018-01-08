@@ -16,6 +16,7 @@
 		CB455F531FFEB78800B9D326 /* secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = CB455F521FFEB78800B9D326 /* secrets.plist */; };
 		CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */ = {isa = PBXBuildFile; fileRef = CB455F5420001E1800B9D326 /* songkickEvents.json */; };
 		CB455F592000491700B9D326 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455F582000491700B9D326 /* Events.swift */; };
+		CB455F5D20040F1800B9D326 /* powered-by-songkick-pink.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		CB455F521FFEB78800B9D326 /* secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = secrets.plist; sourceTree = "<group>"; };
 		CB455F5420001E1800B9D326 /* songkickEvents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = songkickEvents.json; sourceTree = "<group>"; };
 		CB455F582000491700B9D326 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
+		CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered-by-songkick-pink.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				CB455F1A1FFC60B500B9D326 /* AppDelegate.swift */,
+				CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */,
 				CB455F1C1FFC60B500B9D326 /* ViewController.swift */,
 				CB455F582000491700B9D326 /* Events.swift */,
 				CB455F5420001E1800B9D326 /* songkickEvents.json */,
@@ -150,6 +153,7 @@
 				CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */,
 				CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */,
 				CB455F221FFC60B500B9D326 /* Assets.xcassets in Resources */,
+				CB455F5D20040F1800B9D326 /* powered-by-songkick-pink.png in Resources */,
 				CB455F201FFC60B500B9D326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
