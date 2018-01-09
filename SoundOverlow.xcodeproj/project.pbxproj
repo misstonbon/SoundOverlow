@@ -20,6 +20,9 @@
 		CB455F672004496300B9D326 /* musicspot.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F662004496300B9D326 /* musicspot.png */; };
 		CB455F692005525300B9D326 /* playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455F682005525300B9D326 /* playground.swift */; };
 		CB455F732005702000B9D326 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F722005702000B9D326 /* pin.png */; };
+		CB455F79200577E500B9D326 /* pinpic.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F78200577E500B9D326 /* pinpic.png */; };
+		CBBFAC50200578C40028FDB2 /* pinpicture.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC4F200578C40028FDB2 /* pinpicture.png */; };
+		CBBFAC52200579280028FDB2 /* pinpicturesmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC51200579280028FDB2 /* pinpicturesmall.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +42,9 @@
 		CB455F662004496300B9D326 /* musicspot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicspot.png; sourceTree = "<group>"; };
 		CB455F682005525300B9D326 /* playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playground.swift; sourceTree = "<group>"; };
 		CB455F722005702000B9D326 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		CB455F78200577E500B9D326 /* pinpic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpic.png; sourceTree = "<group>"; };
+		CBBFAC4F200578C40028FDB2 /* pinpicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpicture.png; sourceTree = "<group>"; };
+		CBBFAC51200579280028FDB2 /* pinpicturesmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpicturesmall.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,9 @@
 		CB455F191FFC60B500B9D326 /* SoundOverlow */ = {
 			isa = PBXGroup;
 			children = (
+				CB455F78200577E500B9D326 /* pinpic.png */,
+				CBBFAC51200579280028FDB2 /* pinpicturesmall.png */,
+				CBBFAC4F200578C40028FDB2 /* pinpicture.png */,
 				CB455F722005702000B9D326 /* pin.png */,
 				CB455F1A1FFC60B500B9D326 /* AppDelegate.swift */,
 				CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */,
@@ -161,10 +170,13 @@
 				CB455F531FFEB78800B9D326 /* secrets.plist in Resources */,
 				CB455F732005702000B9D326 /* pin.png in Resources */,
 				CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */,
+				CB455F79200577E500B9D326 /* pinpic.png in Resources */,
 				CB455F672004496300B9D326 /* musicspot.png in Resources */,
 				CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */,
 				CB455F221FFC60B500B9D326 /* Assets.xcassets in Resources */,
+				CBBFAC52200579280028FDB2 /* pinpicturesmall.png in Resources */,
 				CB455F5D20040F1800B9D326 /* powered-by-songkick-pink.png in Resources */,
+				CBBFAC50200578C40028FDB2 /* pinpicture.png in Resources */,
 				CB455F201FFC60B500B9D326 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
