@@ -348,7 +348,7 @@ extension ViewController : MKMapViewDelegate
                 view = dequeuedView
             } else {
                 view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.image = UIImage(named: "pinpicturesmall")
+                view.image = UIImage(named: "smallestpin")
                 view.canShowCallout = true
                // view.animatesDrop = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
