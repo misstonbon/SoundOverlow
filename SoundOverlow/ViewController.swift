@@ -226,6 +226,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.map.addAnnotations(self.eventPins)
                 self.map.showAnnotations(self.eventPins, animated: true)
 
+
                 //// END ADD PINS /////
                 
             } catch let jsonErr {
@@ -288,7 +289,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     if self.currentZip != place.postalCode! {
                         self.currentZip = place.postalCode!
                         
-                        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.09, 0.09)
+                        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.05, 0.05)
                         
                         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
                         
@@ -348,6 +349,7 @@ extension ViewController : MKMapViewDelegate
             } else {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
+                view.animatesDrop = true 
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
