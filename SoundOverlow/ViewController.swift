@@ -206,9 +206,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             do {
                 let data = try JSONDecoder().decode(ResponseFromSongkick.self, from: data)
                 
-                print("Printing songkick response:")
-                print(data)
-                
                 //// ADD PINS //////
                 
                 if self.eventPins.count > 0 {
@@ -228,7 +225,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 // adjust zoom
                 self.map.addAnnotations(self.eventPins)
                 self.map.showAnnotations(self.eventPins, animated: true)
-                
+
                 //// END ADD PINS /////
                 
             } catch let jsonErr {
@@ -258,7 +255,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             guard let data = data else {return}
             print("Printing jambase  data:")
             print(String(data: data, encoding: .utf8)!)
-            // print(data)  /// prints bytes again :(
             
             do {
                 let test = try JSONDecoder().decode(ResponseFromJambase.self, from: data)
@@ -292,7 +288,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                     if self.currentZip != place.postalCode! {
                         self.currentZip = place.postalCode!
                         
-                        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.08, 0.08)
+                        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.09, 0.09)
                         
                         let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
                         
@@ -300,13 +296,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         
                         self.map.setRegion(region, animated: true)  // shows blue dot blinking
                         
-                        print(self.currentZip)   // force unwrap to avoid warning
                         self.processJambaseData(zipCode: self.currentZip)
                         let stringLat = "\(location.coordinate.latitude)"
                         let stringLong = "\(location.coordinate.longitude)"
-                        print("Printing String lat and long =========================== from Geodecoder ")
-                        print(stringLat)
-                        print(stringLong)
+                    
                         self.processSongkickData(currentLat: stringLat, currentLong: stringLong)
                     }
                 }
@@ -361,6 +354,11 @@ extension ViewController : MKMapViewDelegate
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
+    {
+        print("tapped!") // continue working on this 
     }
 }
 

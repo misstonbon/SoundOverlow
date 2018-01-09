@@ -29,4 +29,5 @@ class Concert: NSObject, MKAnnotation
     var subtitle: String? {
         return locationName
     }
+    
 }
