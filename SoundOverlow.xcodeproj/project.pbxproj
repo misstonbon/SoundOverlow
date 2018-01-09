@@ -18,6 +18,8 @@
 		CB455F592000491700B9D326 /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455F582000491700B9D326 /* Events.swift */; };
 		CB455F5D20040F1800B9D326 /* powered-by-songkick-pink.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */; };
 		CB455F672004496300B9D326 /* musicspot.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F662004496300B9D326 /* musicspot.png */; };
+		CB455F692005525300B9D326 /* playground.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB455F682005525300B9D326 /* playground.swift */; };
+		CB455F732005702000B9D326 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CB455F722005702000B9D326 /* pin.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		CB455F582000491700B9D326 /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "powered-by-songkick-pink.png"; sourceTree = "<group>"; };
 		CB455F662004496300B9D326 /* musicspot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = musicspot.png; sourceTree = "<group>"; };
+		CB455F682005525300B9D326 /* playground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playground.swift; sourceTree = "<group>"; };
+		CB455F722005702000B9D326 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,7 @@
 		CB455F191FFC60B500B9D326 /* SoundOverlow */ = {
 			isa = PBXGroup;
 			children = (
+				CB455F722005702000B9D326 /* pin.png */,
 				CB455F1A1FFC60B500B9D326 /* AppDelegate.swift */,
 				CB455F5C20040F1800B9D326 /* powered-by-songkick-pink.png */,
 				CB455F1C1FFC60B500B9D326 /* ViewController.swift */,
@@ -76,6 +81,7 @@
 				CB455F5420001E1800B9D326 /* songkickEvents.json */,
 				CB455F1E1FFC60B500B9D326 /* Main.storyboard */,
 				CB455F211FFC60B500B9D326 /* Assets.xcassets */,
+				CB455F682005525300B9D326 /* playground.swift */,
 				CB455F231FFC60B500B9D326 /* LaunchScreen.storyboard */,
 				CB455F662004496300B9D326 /* musicspot.png */,
 				CB455F261FFC60B500B9D326 /* Info.plist */,
@@ -153,6 +159,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB455F531FFEB78800B9D326 /* secrets.plist in Resources */,
+				CB455F732005702000B9D326 /* pin.png in Resources */,
 				CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */,
 				CB455F672004496300B9D326 /* musicspot.png in Resources */,
 				CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */,
@@ -169,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB455F692005525300B9D326 /* playground.swift in Sources */,
 				CB455F592000491700B9D326 /* Events.swift in Sources */,
 				CB455F1D1FFC60B500B9D326 /* ViewController.swift in Sources */,
 				CB455F1B1FFC60B500B9D326 /* AppDelegate.swift in Sources */,

@@ -341,15 +341,16 @@ extension ViewController : MKMapViewDelegate
         
         if let annotation = annotation as? Concert { // using Concert class
             let identifier  = "pin"  // below setup is so that clicking on pins can dequeue current view and queue up the next one 
-            var view: MKPinAnnotationView
+            var view: MKAnnotationView
             if let dequeuedView =
-                mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
+                mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKAnnotationView {
                 dequeuedView.annotation = annotation
                 view = dequeuedView
             } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.image = UIImage(named: "pin")
                 view.canShowCallout = true
-                view.animatesDrop = true 
+               // view.animatesDrop = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
                 view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
