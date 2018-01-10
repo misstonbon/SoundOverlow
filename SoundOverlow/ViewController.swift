@@ -164,6 +164,7 @@ struct State: Decodable {
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    
     //MAP
     
     @IBOutlet weak var map: MKMapView! // imports map view
@@ -177,6 +178,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var eventPins = [MKAnnotation]()
     
+    var eventPin: Concert?
     
     ////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
@@ -361,8 +363,20 @@ extension ViewController : MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        print("tapped!") // continue working on this
+       eventPin = view.annotation as? Concert
+        print("Printing EVENT PIN ---------")
+        print(eventPin!)
+        print("eventPin in MapView:")
+        print(eventPin?.title! as! String )
+
         performSegue(withIdentifier: "showDetails", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetails" {
+            let destinationViewController = segue.destination as! DetailsViewController
+       
+            destinationViewController.concertData = eventPin
+        }
     }
 }
 

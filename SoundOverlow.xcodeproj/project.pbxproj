@@ -24,6 +24,8 @@
 		CBBFAC50200578C40028FDB2 /* pinpicture.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC4F200578C40028FDB2 /* pinpicture.png */; };
 		CBBFAC52200579280028FDB2 /* pinpicturesmall.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC51200579280028FDB2 /* pinpicturesmall.png */; };
 		CBBFAC54200579AD0028FDB2 /* smallestpin.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC53200579AC0028FDB2 /* smallestpin.png */; };
+		CBBFAC7620069BB20028FDB2 /* jonkay.png in Resources */ = {isa = PBXBuildFile; fileRef = CBBFAC7520069BB20028FDB2 /* jonkay.png */; };
+		CBBFAC782006A9970028FDB2 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBFAC772006A9970028FDB2 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +49,8 @@
 		CBBFAC4F200578C40028FDB2 /* pinpicture.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpicture.png; sourceTree = "<group>"; };
 		CBBFAC51200579280028FDB2 /* pinpicturesmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pinpicturesmall.png; sourceTree = "<group>"; };
 		CBBFAC53200579AC0028FDB2 /* smallestpin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smallestpin.png; sourceTree = "<group>"; };
+		CBBFAC7520069BB20028FDB2 /* jonkay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jonkay.png; sourceTree = "<group>"; };
+		CBBFAC772006A9970028FDB2 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			children = (
 				CB455F78200577E500B9D326 /* pinpic.png */,
 				CBBFAC51200579280028FDB2 /* pinpicturesmall.png */,
+				CBBFAC7520069BB20028FDB2 /* jonkay.png */,
 				CBBFAC53200579AC0028FDB2 /* smallestpin.png */,
 				CBBFAC4F200578C40028FDB2 /* pinpicture.png */,
 				CB455F722005702000B9D326 /* pin.png */,
@@ -98,6 +103,7 @@
 				CB455F662004496300B9D326 /* musicspot.png */,
 				CB455F261FFC60B500B9D326 /* Info.plist */,
 				CB455F521FFEB78800B9D326 /* secrets.plist */,
+				CBBFAC772006A9970028FDB2 /* DetailsViewController.swift */,
 			);
 			path = SoundOverlow;
 			sourceTree = "<group>";
@@ -175,6 +181,7 @@
 				CB455F251FFC60B500B9D326 /* LaunchScreen.storyboard in Resources */,
 				CB455F79200577E500B9D326 /* pinpic.png in Resources */,
 				CB455F672004496300B9D326 /* musicspot.png in Resources */,
+				CBBFAC7620069BB20028FDB2 /* jonkay.png in Resources */,
 				CB455F5520001E1800B9D326 /* songkickEvents.json in Resources */,
 				CBBFAC54200579AD0028FDB2 /* smallestpin.png in Resources */,
 				CB455F221FFC60B500B9D326 /* Assets.xcassets in Resources */,
@@ -196,6 +203,7 @@
 				CB455F592000491700B9D326 /* Events.swift in Sources */,
 				CB455F1D1FFC60B500B9D326 /* ViewController.swift in Sources */,
 				CB455F1B1FFC60B500B9D326 /* AppDelegate.swift in Sources */,
+				CBBFAC782006A9970028FDB2 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
