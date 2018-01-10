@@ -361,7 +361,8 @@ extension ViewController : MKMapViewDelegate
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
-        print("tapped!") // continue working on this 
+        print("tapped!") // continue working on this
+        performSegue(withIdentifier: "showDetails", sender: self)
     }
 }
 
