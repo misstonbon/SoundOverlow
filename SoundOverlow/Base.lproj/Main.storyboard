@@ -38,34 +38,43 @@
         <!--DetailsViewController-->
         <scene sceneID="OfL-T5-gsC">
             <objects>
-                <viewController title="DetailsViewController" id="Rlm-Ab-Yoz" sceneMemberID="viewController">
+                <viewController title="DetailsViewController" id="Rlm-Ab-Yoz" customClass="DetailsViewController" customModule="SoundOverlow" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sAL-BV-Stc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Fill me out !" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wqE-rI-3iq">
-                                <rect key="frame" x="24" y="91" width="327" height="20.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eJD-Kf-Khn">
+                                <rect key="frame" x="146" y="20" width="73" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pinpic.png"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="ur7-OL-WHX"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Event " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u8I-MD-6HN">
+                                <rect key="frame" x="39" y="217" width="286" height="82"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="powered-by-songkick-pink.png" translatesAutoresizingMaskIntoConstraints="NO" id="8PL-N8-bNl">
-                                <rect key="frame" x="132" y="388" width="111" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tickets:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UTv-YX-iRL">
+                                <rect key="frame" x="57" y="527" width="207" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-8y-kQk">
-                                <rect key="frame" x="24" y="20" width="68" height="87"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f2r-Po-Fbh">
+                                <rect key="frame" x="53" y="556" width="258" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="BACK" image="pinpicture.png">
-                                    <color key="titleShadowColor" red="0.96558588990000005" green="0.23734178440000001" blue="0.29644767220000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
+                                <state key="normal" title="Button" image="powered-by-songkick-pink.png"/>
                                 <connections>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="8S9-pz-F4s"/>
+                                    <action selector="toTickets:" destination="Rlm-Ab-Yoz" eventType="touchUpInside" id="su2-53-FP7"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-oZ-cxg">
-                                <rect key="frame" x="165" y="478" width="44" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sqi-qI-Qbz">
+                                <rect key="frame" x="276" y="36" width="49" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="jonkay.png"/>
                             </button>
@@ -73,6 +82,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="1ku-OD-zDj"/>
                     </view>
+                    <connections>
+                        <outlet property="eventTitle" destination="u8I-MD-6HN" id="8dx-60-biy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6dz-65-YV2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,7 +93,7 @@
     </scenes>
     <resources>
         <image name="jonkay.png" width="40" height="40"/>
-        <image name="pinpicture.png" width="60" height="71"/>
+        <image name="pinpic.png" width="70" height="83"/>
         <image name="powered-by-songkick-pink.png" width="427" height="150"/>
     </resources>
 </document>

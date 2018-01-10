@@ -13,27 +13,18 @@ import Foundation
 class DetailsViewController: UIViewController {
     
     var concertData: Concert?
+    var eventName: String?
+    var venueName: String?
+    var ticketsURL: String?
 
+    @IBOutlet var eventTitle: UILabel!
+    
+    @IBAction func toTickets(_ sender: Any) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
