@@ -20,6 +20,14 @@ class DetailsViewController: UIViewController {
     @IBOutlet var eventTitle: UILabel!
     
     @IBAction func toTickets(_ sender: Any) {
+        openUrl(urlStr: "http://www.google.com")
+    }
+    
+    func openUrl(urlStr:String!) {
+        
+        if let url = NSURL(string:urlStr) {
+            UIApplication.shared.open(url as URL, options: [:], completionHandler: nil)
+        }
     }
     
     override func viewDidLoad() {
