@@ -32,6 +32,16 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //receives data from MapViewController and sets text to labels
+        
+        if let concertDataToDisplay = concertData {
+            print("Did it pass parkData correctly?")
+            print(concertDataToDisplay)
+            print(concertDataToDisplay.title!)
+            
+            eventTitle.text = concertDataToDisplay.title
+        }
 
     }
 
