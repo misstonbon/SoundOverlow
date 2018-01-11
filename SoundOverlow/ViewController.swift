@@ -19,9 +19,8 @@ let dict = NSDictionary(contentsOfFile: path!)
 //////////////////////////////// LOADS SECRETS ////////////////////////////////////////////////////////////
 
 // Load the dictionary of secret keys from secrets.plist
-let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
-let songKickKey = dict!.object(forKey: "SONGKICK_KEY") as! String
 
+let songKickKey = dict!.object(forKey: "SONGKICK_KEY") as! String
 
 ////////////////////////////////// PARSES SONGKICK JSON //////////////////////////////////
 
@@ -124,7 +123,7 @@ struct State: Decodable {
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     
-    //MAP
+//////////////// MAP /////////////////////////////////////
     
     @IBOutlet weak var map: MKMapView! // imports map view
     
@@ -161,9 +160,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         URLSession.shared.dataTask(with: url) {(data, response, err) in
             
             guard let data = data else {return}
-            print("Printing songkick data:")
-            print(String(data: data, encoding: .utf8)!)
-            
+
             do {
                 let data = try JSONDecoder().decode(ResponseFromSongkick.self, from: data)
                 
@@ -174,7 +171,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 }
                 
                 self.eventPins.removeAll()
-                
+        
                 let events = data.resultsPage.results.event;
                 
                 for event in events {
@@ -186,17 +183,12 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 // adjust zoom
                 self.map.addAnnotations(self.eventPins)
                 self.map.showAnnotations(self.eventPins, animated: true)
-
-
-                //// END ADD PINS /////
                 
             } catch let jsonErr {
                 print("Error serializing json:", jsonErr)
             }
-            }.resume()
-        
+      }.resume()
     }
-    
 
 ////////////////////////////////////   CURRENT LOCATION ///////////////////////////////////
     
@@ -286,7 +278,7 @@ extension ViewController : MKMapViewDelegate
         return nil
     }
     
-//////////////// TAPPING INFOR BUTTON CONTROLS ////////////////////////////
+//////////////// TAPPING INFO BUTTON CONTROLS ////////////////////////////
     
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
@@ -297,7 +289,6 @@ extension ViewController : MKMapViewDelegate
     }
     
 ////////////////  LINKS TWO VIEWS VIA SEGUE //////////////////////////////////////
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
