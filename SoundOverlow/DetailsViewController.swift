@@ -36,7 +36,7 @@ class DetailsViewController: UIViewController {
         //receives data from MapViewController and sets text to labels
         
         if let concertDataToDisplay = concertData {
-            print("Did it pass parkData correctly?")
+            print("Printing data!")
             print(concertDataToDisplay)
             print(concertDataToDisplay.title!)
             
