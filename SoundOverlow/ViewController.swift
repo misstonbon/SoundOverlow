@@ -23,47 +23,6 @@ let jambaseKey = dict!.object(forKey: "JAMBASE_KEY") as! String
 let songKickKey = dict!.object(forKey: "SONGKICK_KEY") as! String
 
 
-/////////////////////////////////// PARSES JAMBASE JSON  ////////////////////////////////////
-
-struct ResponseFromJambase: Decodable {
-    let Info: Info
-    let Events: [Event]
-}
-
-struct Info: Decodable {
-   let TotalResults: Int
-   let PageNumber: Int
-   let Message: String?
-}
-
-struct Event: Decodable {
-    let Id: Int
-    let Date: String
-    let Venue: Venue
-    let Artists: [Artist]
-    let TicketUrl: String
-}
-
-struct Venue: Decodable {
-    let Id: Int
-    let Name: String
-    let Address: String?
-    let City: String?
-    let State: String?
-    let StateCode: String?
-    let Country: String?
-    let CountryCode: String?
-    let ZipCode: String?
-    let Url: String?
-    let Latitude: Double
-    let Longitude: Double
-}
-
-struct Artist: Decodable {
-    let Id: Int
-    let Name: String
-}
-
 ////////////////////////////////// PARSES SONGKICK JSON //////////////////////////////////
 
 struct ResponseFromSongkick: Decodable {
@@ -160,7 +119,7 @@ struct State: Decodable {
     let displayName: String?
 }
 
-/////////////  VIEW CONTROLLER  /////////////////////////////////////////
+/////////////////////////////  VIEW CONTROLLER  /////////////////////////////////////////
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
@@ -180,7 +139,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var eventPin: Concert?
     
-    ////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
+////////////////// SONGKICK JSON PARSING FUNCTION   /////////////////////////////////////
     
     func processSongkickData(currentLat: String, currentLong: String ) {
         
@@ -238,43 +197,11 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
     }
     
-///////////////////////  JAMBASE JSON PARSING FUNCTION ////////////////////////////
-    
-    func processJambaseData (zipCode: String) {
-        let now = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "YYYY-MM-DD"
-        let today = dateFormatter.string(from: now)
-        
-        let jambaseurlString = "http://api.jambase.com/events?zipCode=\(zipCode)&radius=30&startDate=\(today)T00:00:00&endDate=\(today)T23:59:00&page=0&api_key=\(String(describing: jambaseKey))"
-        
-        print("Jambase URL STRING ---------------------------")
-        print(jambaseurlString)
-        
-        guard let url = URL(string: jambaseurlString) else {return}
-        
-        URLSession.shared.dataTask(with: url) {(data, response, err) in
-            
-            guard let data = data else {return}
-            print("Printing jambase  data:")
-            print(String(data: data, encoding: .utf8)!)
-            
-            do {
-                let test = try JSONDecoder().decode(ResponseFromJambase.self, from: data)
-                
-                print("Printing jambase Info:")
-                print(test)
-                
-            } catch let jsonErr {
-                print("Error serializing json:", jsonErr)
-            }
-            }.resume()
-    }
+
+////////////////////////////////////   CURRENT LOCATION ///////////////////////////////////
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-////////////////////////////////////   CURRENT LOCATION ///////////////////////////////////
-        
+
         let location = locations[0]  // most recent location
 
         self.map.showsUserLocation = true // shows blue dot
@@ -299,7 +226,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                         
                         self.map.setRegion(region, animated: true)  // shows blue dot blinking
                         
-                        self.processJambaseData(zipCode: self.currentZip)
                         let stringLat = "\(location.coordinate.latitude)"
                         let stringLong = "\(location.coordinate.longitude)"
                     
@@ -315,8 +241,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-
-        self.processJambaseData(zipCode: self.currentZip)
+        
         self.processSongkickData(currentLat: self.currentLat, currentLong: self.currentLong)
         
         manager.delegate = self
@@ -333,7 +258,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
 }
 
-///// Gives map view for annotation /////
+////////////////////////////// SETS UP ANNOTATIONS //////////////////////////////////
 
 extension ViewController : MKMapViewDelegate
 {
@@ -361,21 +286,24 @@ extension ViewController : MKMapViewDelegate
         return nil
     }
     
+//////////////// TAPPING INFOR BUTTON CONTROLS ////////////////////////////
+    
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl)
     {
+        // this is the event pin containing all data relevant to DetailViewController !
        eventPin = view.annotation as? Concert
-        print("Printing EVENT PIN ---------")
-        print(eventPin!)
-        print("eventPin in MapView:")
-        print(eventPin?.title! as! String )
-
+        
         performSegue(withIdentifier: "showDetails", sender: self)
     }
+    
+////////////////  LINKS TWO VIEWS VIA SEGUE //////////////////////////////////////
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             let destinationViewController = segue.destination as! DetailsViewController
        
-            destinationViewController.concertData = eventPin
+            destinationViewController.concertData = eventPin    // passing all pin data to concertData var in DetailsViewController
         }
     }
 }
